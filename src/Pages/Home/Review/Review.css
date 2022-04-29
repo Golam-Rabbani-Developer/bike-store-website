@@ -1,0 +1,28 @@
+.image {
+    background-color: var(--secondary-color);
+}
+
+.carousel-container {
+    margin-top: 50px;
+}
+
+.review-float {
+    background-color: var(--secondary-color);
+    width: 200px;
+    height: 10px;
+    margin-bottom: 16px;
+}
+
+.img {
+    margin-left: 70px;
+}
+
+blockquote::after {
+    content: open-quote;
+    font-size: 40px;
+}
+
+blockquote::before {
+    content: open-quote;
+    font-size: 40px;
+}

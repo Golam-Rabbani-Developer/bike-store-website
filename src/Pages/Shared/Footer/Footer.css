@@ -1,0 +1,12 @@
+.footer {
+    margin-top: 80px;
+    padding-top: 180px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+@media (min-width:768px) {
+    .footer {
+        padding-top: 220px;
+    }
+}
