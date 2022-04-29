@@ -5,6 +5,16 @@
     color: white;
 }
 
+.socials p {
+    color: rgb(154, 152, 152);
+}
+
+.socials p:hover {
+    color: var(--primary-color);
+}
+
+
+
 @media (min-width:768px) {
     .footer {
         padding-top: 220px;

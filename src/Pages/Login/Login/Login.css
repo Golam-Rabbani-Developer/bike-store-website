@@ -1,0 +1,32 @@
+.login-form {
+    width: 430px;
+    margin: 60px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(210, 209, 209);
+    font-family: var(--secondary-font);
+    background-color: #D4F1EE;
+}
+
+.google {
+    border-radius: 35px;
+}
+
+.reset-pass {
+    cursor: pointer;
+}
+
+.login-form input {
+    padding: 10px 0;
+    border-radius: 23px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.user,
+.user-pass {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+}

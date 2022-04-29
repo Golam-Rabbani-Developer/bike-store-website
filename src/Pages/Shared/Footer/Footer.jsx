@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='footer '>
             <div className='d-flex flex-column flex-md-row justify-content-between align-items-center container'>
-                <div className="footer-intro">
+                <div className="footer-intro text-md-start">
                     <h1 className='sub-title'>Bikers</h1>
                     <p>The most latgest bike store in the wold can serve you <br /> latest ulity of motorcycle soucan sell here your motorcycle </p>
                     <p className='text-uppercase'> For Support</p>
