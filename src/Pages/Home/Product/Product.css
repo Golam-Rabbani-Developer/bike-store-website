@@ -1,0 +1,14 @@
+.product {
+    background: #F6F6F6;
+    font-family: var(--secondary-font);
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.product img {
+    transition: all 0.7s;
+}
+
+.product:hover img {
+    transform: scale(1.1) translate(10px);
+    position: relative;
+}
