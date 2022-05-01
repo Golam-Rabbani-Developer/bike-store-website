@@ -1,7 +1,7 @@
 
 const addRemoveData = (data, id) => {
     console.log(data.quantity)
-    const url = `http://localhost:5000/bikes/${id}`
+    const url = `https://bikes-server-side.herokuapp.com/bikes/${id}`
     fetch(url, {
         method: "PUT",
         headers: {

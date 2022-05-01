@@ -17,7 +17,7 @@ const Addinventory = () => {
             quantity: quantity,
             photourl: photourl,
         }
-        const url = `http://localhost:5000/bikes`
+        const url = `https://bikes-server-side.herokuapp.com/bikes`
         fetch(url, {
             method: "POST",
             headers: {

@@ -11,8 +11,9 @@ const CustomerInventory = () => {
     useEffect(() => {
         const getInventory = async () => {
             const email = user?.email;
+
             console.log(email)
-            const url = `http://localhost:5000/addedCollection?email=${email}`
+            const url = `https://bikes-server-side.herokuapp.com/addedCollection?email=${email}`
             try {
                 fetch(url, {
                     headers: {
@@ -33,7 +34,7 @@ const CustomerInventory = () => {
         getInventory()
     }, [user])
     const handleDeleteBtn = (id) => {
-        const url = `http://localhost:5000/addedCollection/${id}`
+        const url = `https://bikes-server-side.herokuapp.com/addedCollection/${id}`
         fetch(url, {
             method: "DELETE",
             headers: {

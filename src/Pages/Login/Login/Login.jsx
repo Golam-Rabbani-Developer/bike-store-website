@@ -31,9 +31,10 @@ const Login = () => {
             .then(res => {
                 navigate(from, { replace: true })
             })
-        const url = `http://localhost:5000/login`
+        const url = `https://bikes-server-side.herokuapp.com/login`
         const { data } = await axios.post(url, { email })
-        localStorage.setItem('accessToken', JSON.stringify(data))
+        localStorage.setItem('accessToken', JSON.stringify(data.accessToken))
+        console.log(data.accessToken)
         e.target.reset()
     }
     const handleGoogle = async () => {
@@ -41,7 +42,7 @@ const Login = () => {
             navigate(from, { replace: true })
         })
         const email = user?.user?.email;
-        const url = `http://localhost:5000/login`
+        const url = `https://bikes-server-side.herokuapp.com/login`
         const { data } = await axios.post(url, { email })
         localStorage.setItem('accessToken', JSON.stringify(data))
 

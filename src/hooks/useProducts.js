@@ -5,7 +5,7 @@ const useProducts = () => {
     const [page, setPage] = useState(0)
     const [size, setSize] = useState(6)
     useEffect(() => {
-        fetch(`http://localhost:5000/bikes?page=${page}&size=${size}`)
+        fetch(`https://bikes-server-side.herokuapp.com/bikes?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [page, size])

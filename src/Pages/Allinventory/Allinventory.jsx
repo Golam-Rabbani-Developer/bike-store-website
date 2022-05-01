@@ -1,17 +1,22 @@
-import useProducts from '../../hooks/useProducts';
 import { RiDeleteBin5Fill } from "react-icons/ri"
 import { ImPlus } from 'react-icons/im'
 import img from "../../../src/images/logo/header-logo (1).png"
 import './Allinventory.css'
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 const Allinventory = () => {
-    const [products, setProducts] = useProducts()
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        fetch('https://bikes-server-side.herokuapp.com/bikes')
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
 
     const handleDeleteBtn = (id) => {
         const confirmation = window.confirm("Do you want to Delete your item")
         if (confirmation) {
-            const url = `http://localhost:5000/bikes/${id}`
+            const url = `https://bikes-server-side.herokuapp.com/bikes/${id}`
             fetch(url, {
                 method: "DELETE",
                 headers: {

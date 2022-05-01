@@ -16,7 +16,7 @@ const Inventory = () => {
     const changedProduct = products.find(product => product._id === id)
     const [user] = useAuthState(auth)
     useEffect(() => {
-        fetch(`http://localhost:5000/bikes/${id}`)
+        fetch(`https://bikes-server-side.herokuapp.com/bikes/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
