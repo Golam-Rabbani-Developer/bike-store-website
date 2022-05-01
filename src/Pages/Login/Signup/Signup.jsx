@@ -3,11 +3,13 @@ import { FaUser, FaUserLock } from "react-icons/fa"
 import { MdAlternateEmail } from 'react-icons/md'
 import img from "../../../images/logo/header-logo (1).png"
 import { FcGoogle } from "react-icons/fc"
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebaseinit';
 import { toast } from 'react-toastify';
 const Signup = () => {
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/"
     const navigate = useNavigate()
     const [sendEmailVerification] = useSendEmailVerification(auth);
     const [
@@ -29,13 +31,16 @@ const Signup = () => {
         const password = e.target.password.value;
         createUserWithEmailAndPassword(email, password)
             .then(res => {
-
+                navigate(from, { replace: true });
             })
         e.target.reset()
 
     }
     const handleGoogle = () => {
         signInWithGoogle()
+            .then(res => {
+                navigate(from, { replace: true });
+            })
     }
     return (
         <div className='login-form  p-5 rounded-3'>

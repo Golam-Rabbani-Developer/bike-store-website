@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 import { FaUserLock } from "react-icons/fa"
 import { MdAlternateEmail } from 'react-icons/md'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc"
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import img from "../../../images/logo/header-logo (1).png"
 import './Login.css'
 import auth from '../../../firebaseinit';
 import { toast } from 'react-toastify';
+import { async } from '@firebase/util';
+import axios from 'axios';
 const Login = () => {
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/"
     const [
         signInWithEmailAndPassword,
     ] = useSignInWithEmailAndPassword(auth);
@@ -16,16 +21,30 @@ const Login = () => {
         auth
     );
     const [signInWithGoogle] = useSignInWithGoogle(auth);
+    const [user] = useAuthState(auth)
     const [email, setEmail] = useState('')
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         const email = e.target.email.value;
         const pass = e.target.password.value;
-        signInWithEmailAndPassword(email, pass)
+        await signInWithEmailAndPassword(email, pass)
+            .then(res => {
+                navigate(from, { replace: true })
+            })
+        const url = `http://localhost:5000/login`
+        const { data } = await axios.post(url, { email })
+        localStorage.setItem('accessToken', JSON.stringify(data))
         e.target.reset()
     }
-    const handleGoogle = () => {
-        signInWithGoogle()
+    const handleGoogle = async () => {
+        await signInWithGoogle().then(res => {
+            navigate(from, { replace: true })
+        })
+        const email = user?.user?.email;
+        const url = `http://localhost:5000/login`
+        const { data } = await axios.post(url, { email })
+        localStorage.setItem('accessToken', JSON.stringify(data))
+
     }
     return (
         <div className='login-form p-5 rounded-3'>

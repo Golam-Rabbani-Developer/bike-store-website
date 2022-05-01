@@ -3,7 +3,8 @@
 }
 
 .carousel-container {
-    margin-top: 50px;
+    margin-top: 170px;
+    background-color: rgba(3, 7, 33, 0.863);
 }
 
 .review-float {
@@ -11,6 +12,10 @@
     width: 200px;
     height: 10px;
     margin-bottom: 16px;
+}
+
+.heading-review {
+    border-bottom: 4px solid var(--primary-color);
 }
 
 .img {

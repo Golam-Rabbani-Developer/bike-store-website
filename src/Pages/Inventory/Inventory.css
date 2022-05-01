@@ -3,6 +3,11 @@
     margin-top: 40px;
 }
 
+.inventory-product>* {
+    flex-basis: 50%;
+}
+
+
 .overview {
     box-shadow:
         0px 3px 0px rgba(0, 0, 0, 0.65);

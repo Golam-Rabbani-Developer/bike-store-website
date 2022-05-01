@@ -7,11 +7,6 @@
     grid-template-columns: 1fr;
 }
 
-@media (min-width:768px) {
-    .blogpost {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media (min-width:992px) {
     .blogpost {

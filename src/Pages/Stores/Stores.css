@@ -1,0 +1,26 @@
+.stores {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.selected {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.stores-container {
+    margin-top: 50px;
+}
+
+@media (min-width:768px) {
+    .stores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:992px) {
+    .stores {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

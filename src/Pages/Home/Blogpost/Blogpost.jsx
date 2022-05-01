@@ -10,10 +10,9 @@ const Blogpost = () => {
     return (
         <div className='blogpost-container container'>
             <div className='mb-5 d-flex justify-content-center align-items-center flex-column'>
-                <h2 className='heading text-center mb-3'>Recent Blogposts</h2>
-                <div className="review-float"></div>
+                <h2 className='heading text-center mb-3'>Recent <span className='sub-heading-title'>Blogposts</span></h2>
             </div>
-            <div className="blogpost">
+            <div data-aos="fade-up" className="blogpost">
                 {
                     data.map((blog, index) =>
                         <SingleBlog

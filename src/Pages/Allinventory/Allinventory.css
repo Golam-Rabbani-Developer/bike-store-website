@@ -1,0 +1,31 @@
+.allinventory {
+    font-family: var(--secondary-font);
+    margin: 50px;
+}
+
+.table-section {
+    background-color: rgb(232, 243, 232);
+    border-radius: 10px;
+}
+
+table {
+    /* background-color: white; */
+}
+
+.table>:not(caption)>*>* {
+    border-bottom: none;
+}
+
+.addform-section {}
+
+.addform form input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 10px;
+}
+
+.addform form input:focus {
+    outline: none;
+    box-shadow: none;
+}

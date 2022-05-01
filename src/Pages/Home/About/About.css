@@ -1,0 +1,29 @@
+.about-container {
+    margin-top: 90px;
+    min-height: 100vh;
+}
+
+.sub-heading-title {
+    color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.about-img img {
+    transition: all 800ms;
+}
+
+.about-img img:hover {
+    transform: translate(8px) rotateX(10deg) rotateY(-10deg) scale(1.1);
+}
+
+.about>* {
+    flex-basis: 50%;
+}
+
+.phone {
+    cursor: pointer;
+}
+
+.about-text {
+    font-family: var(--secondary-font);
+}

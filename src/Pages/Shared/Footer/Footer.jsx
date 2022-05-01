@@ -4,10 +4,12 @@ import { AiFillFacebook, AiFillLinkedin, AiFillInstagram } from "react-icons/ai"
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { BsFillTelephoneOutboundFill } from "react-icons/bs"
 import './Footer.css'
+import { useLocation } from 'react-router-dom';
 const date = new Date()
 const Footer = () => {
+    const location = useLocation()
     return (
-        <div className='footer '>
+        <div className={`footer ${location.pathname === "/home" || location.pathname === '/' ? "padding" : ""}`}>
             <div className='d-flex flex-column flex-md-row justify-content-between align-items-center container'>
                 <div className="footer-intro text-md-start">
                     <h1 className='sub-title'>Bikers</h1>

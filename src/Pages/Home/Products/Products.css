@@ -4,6 +4,10 @@
     grid-gap: 10px;
 }
 
+.products-container {
+    margin-top: 10px;
+}
+
 @media(min-width:768px) {
     .products {
         grid-template-columns: repeat(2, 1fr);

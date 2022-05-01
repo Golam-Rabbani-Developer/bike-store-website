@@ -4,11 +4,17 @@
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
 
+.card {
+    position: relative;
+}
+
+
+
 .product img {
     transition: all 0.7s;
 }
 
-.product:hover img {
-    transform: scale(1.1) translate(10px);
+.product-img:hover img {
+    transform: scale(1.1) translate(5px);
     position: relative;
 }

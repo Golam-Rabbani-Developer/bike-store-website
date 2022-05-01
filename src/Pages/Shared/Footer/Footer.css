@@ -1,8 +1,12 @@
 .footer {
     margin-top: 80px;
-    padding-top: 180px;
+    padding-top: 40px;
     background-color: var(--secondary-color);
     color: white;
+}
+
+.padding {
+    padding-top: 180px;
 }
 
 .socials p {
@@ -16,7 +20,7 @@
 
 
 @media (min-width:768px) {
-    .footer {
+    .padding {
         padding-top: 220px;
     }
 }

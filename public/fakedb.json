@@ -1,93 +1,106 @@
 [
     {
         "price": "$1,032.24",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": " https://i.ibb.co/jfVngjF/l3-removebg-preview.png",
         "quantity": 21,
         "name": "Klager GSX 250 R",
+        "description": " Two-wheeled steerable machine that is pedaled by the rider's feet. On a standard bicycle the wheels are mounted in-line in a metal frame, with the front wheel held in a rotatable fork.",
         "company": "Galaxy Racer"
     },
     {
         "price": "$3,994.40",
-        "picture": "https://i.ibb.co/3shkKpn/l4-1.jpg",
+        "picture": "https://i.ibb.co/qBNnpm1/product-3-removebg-preview.png",
         "quantity": 23,
         "name": "Royal Enfield",
+        "description": "The Bike is a small, human powered land vehicle with a seat, two wheels, two pedals, and a metal chain connected to cogs on the pedals and rear wheel. A frame gives the bike strength, and the other parts are attached to the frame",
         "company": "Royal Enfield"
     },
     {
         "price": "$1,085.26",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/HpSkGWt/l2-2-removebg-preview.png",
         "quantity": 40,
-        "name": "Drake Stevens",
-        "company": "BOSTONIC"
+        "name": "Demonissi Gori",
+        "description": "Look and feel is very poor but honda says it has one of best look and features that another company can't give you. Fuel average is average. Ride quality is poor but good for under 5km trave",
+        "company": "Piaggio"
     },
     {
         "price": "$1,316.37",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/qBNnpm1/product-3-removebg-preview.png",
         "quantity": 30,
-        "name": "Staci Kerr",
-        "company": "RODEMCO"
+        "name": "Maxlon ZPE 54",
+        "description": "Look and Comfort: The bike itself looks cool as it has a simple/classic shape, however, comfort level of this bike is worst. The tank and seat are on the same level and you slip on to the tank while riding at normal speeds. The bike is good if you ride it for less than 30 mins.",
+        "company": "KTM AG"
     },
     {
         "price": "$1,730.11",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/w68c5N1/product-5-removebg-preview.png",
         "quantity": 30,
-        "name": "Mara Beard",
-        "company": "VALPREAL"
+        "name": "Glorio GSX 250 R",
+        "description": "Glorio GSX 250 R 125 is best at 60-80 speed gives 35-40 fuel economy Has class and style,Sound is awesome and Class is outclassed if u are a cheapster then give it a 3 star and go buy a United 125 Or a metro 125 because those bikes are for travel but this for winners ",
+        "company": "BMW AG"
     },
     {
         "price": "$1,506.87",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/3svhx4G/product-1-removebg-preview.png",
         "quantity": 34,
         "name": "Frank Mclaughlin",
-        "company": "CABLAM"
+        "description": "When you ride you have more respect than a mehran person... Fuel economy is around 40 to 42 with zero comfort as i read 2006 pakwheels discussions of having zero attention of company about vibration and seat comfort... Still experiencing the same....",
+        "company": "TVS MOTOR"
     },
     {
         "price": "$2,727.86",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/hWR6vXP/l1-removebg-preview.png",
         "quantity": 32,
         "name": "Kathrine Carver",
-        "company": "ISOSWITCH"
+        "description": "The look of this bike is amazing it feels great on this bikeThis is the real ride in style bike it gives great fuel average its does not use too much fuel like honda 125 handling is amazing and even better if its handle is moved backward a bit.Best bike",
+        "company": "BAJAJ AUTO"
     },
     {
         "price": "$2,809.52",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/jfVngjF/l3-removebg-preview.png",
         "quantity": 26,
         "name": "Terrell Porter",
-        "company": "PETIGEMS"
+        "description": "Its has a unique look in the Pakistani market as all the old bike have the same shape since 1990. It is giving me a fuel economy of 58km/L which is very good, bike is durable and only needs oil change at proper time and tuning after 3000 Kms. I have the CBU from 2015 and the parts are expensive because they are all imported but the new models are local assembled and hence parts are relatively cheaper.",
+        "company": "YAMAHA MOTORS"
     },
     {
         "price": "$2,650.89",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/3svhx4G/product-1-removebg-preview.png",
         "quantity": 24,
-        "name": "Molina Burns",
-        "company": "EMTRAK"
+        "name": "HERO BIKE 160cc",
+        "description": "HERO BIKE 160cclooks are awesomeNo Comparison of comfort level in Pakistan market.Fuel consumption of Yamaha YBR is best and better than CG 160 and HERO BIKE 160cc.Those who are fans of Honda and Suzuki should must try YBR.My daily travelling is almost 100kms and i'm fan of Yamaha now",
+        "company": "HERO MOTOR CORP"
     },
     {
         "price": "$3,354.59",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/jfVngjF/l3-removebg-preview.png",
         "quantity": 34,
-        "name": "Kirsten Collins",
-        "company": "KAGGLE"
+        "name": "HONDA CVR 250cc",
+        "description": "Its looks are awesome. Best bike ever Performance is also very good Comfortness is Best feels like you are sitting in a car .Fuel average is Best 55km per litre Brakes are great and bike is very reliable and stable on road .I suggest everyone should but this bike instead of other third class bikes whose looks have not change",
+        "company": "HONDA"
     },
     {
         "price": "$3,702.41",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/HpSkGWt/l2-2-removebg-preview.png",
         "quantity": 38,
-        "name": "Sally Stanley",
-        "company": "TROLLERY"
+        "name": "KAWASAKI 250cc",
+        "description": "Great good bike because its comfortable for long drive its also a home and family bike stylish cool, little bit of comfort problem but it's OK fuel average is good giving 35 per litre, it's too much better than suzuki 150 and Honda 125,well I suggest to buy this bike",
+        "company": "HARLEY DAVIDSOON"
     },
     {
         "price": "$1,828.07",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/hWR6vXP/l1-removebg-preview.png",
         "quantity": 33,
-        "name": "Sweet Dale",
-        "company": "RODEOMAD"
+        "name": "DUCATI 180cc ",
+        "description": "A grear look...giving furl average of 50 in city...no vibration even at speed 100...great picking and engine performance...like yhis bike",
+        "company": "BOSS HOSS"
     },
     {
         "balance": "$3,777.99",
-        "picture": "https://i.ibb.co/h2qLn66/l2-1.jpg",
+        "picture": "https://i.ibb.co/jfVngjF/l3-removebg-preview.png",
         "quantity": 39,
-        "name": "Watkins Duke",
-        "company": "DATACATOR"
+        "name": "Yaamaha 280cc ",
+        "description": "Awesome look and great feel fuel average is good no vibrate I've run a honda for 5 years, it's a lot nicer than that It is awesome does not feel even at the speed of 100 Honda starts vibrating at 80 speed but yamaha yb125z is very good no vibrate even at the speed of 100",
+        "company": "MOTO GUZZI"
     }
 ]
