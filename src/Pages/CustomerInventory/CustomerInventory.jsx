@@ -13,7 +13,7 @@ const CustomerInventory = () => {
             const email = user?.email;
 
             console.log(email)
-            const url = `https://bikes-server-side.herokuapp.com/addedCollection?email=${email}`
+            const url = `http://localhost:5000/addedCollection?email=${email}`
             try {
                 fetch(url, {
                     headers: {
