@@ -3,50 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebaseinit';
+import useInventory from '../../hooks/useInventory';
+import deleteData from '../../utilitis/deleteData';
 import './CustomerInventory.css'
 const CustomerInventory = () => {
     const [user] = useAuthState(auth)
-    const navigate = useNavigate()
-    const [inventorys, setInventorys] = useState([])
-    useEffect(() => {
-        const getInventory = async () => {
-            const email = user?.email;
-            const url = `https://bikes-server-side.herokuapp.com/addedCollection?email=${email}`
-            try {
-                fetch(url, {
-                    headers: {
-                        authorization: `Bearer ${JSON.parse(localStorage.getItem("accessToken"))}`
-                    }
-                })
-                    .then(res => res.json())
-                    .then(data => setInventorys(data))
-            }
-            catch (error) {
-                if (error.response.status === 401 || error.response.status === 403) {
-                    signOut(auth)
-                    navigate("/home")
-                }
-                console.log(error)
-            }
-        }
-        getInventory()
-    }, [user])
+    const [inventorys, setInventorys] = useInventory(user)
     const handleDeleteBtn = (id) => {
         const url = `https://bikes-server-side.herokuapp.com/addedCollection/${id}`
-        fetch(url, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    const remaining = inventorys.filter(inventory => inventory._id !== id)
-                    setInventorys(remaining)
-                }
-            })
-
+        deleteData(id, url, inventorys, setInventorys)
     }
     return (
         <div className='customerinventory container mx-auto'>

@@ -11,11 +11,13 @@ const Addinventory = () => {
         const email = e.target.email.value;
         const quantity = e.target.numbers.value;
         const photourl = e.target.photo.value;
+        const company = e.target.companyname.value;
         const data = {
             name: name,
             email: email,
             quantity: quantity,
             photourl: photourl,
+            company: company,
         }
         const url = `https://bikes-server-side.herokuapp.com/bikes`
         fetch(url, {
@@ -27,6 +29,7 @@ const Addinventory = () => {
         }, { email })
         toast("Your Collection added successfully")
         e.target.reset()
+        console.log(data)
     }
     return (
         <div className="addform-section">
@@ -37,6 +40,7 @@ const Addinventory = () => {
                 <hr />
                 <form onSubmit={handleSubmit}>
                     <input style={{ height: "35px" }} className='w-100' type="text" name="name" id="name" placeholder='Collection name' required />
+                    <input style={{ height: "35px" }} className='w-100' type="text" name="companyname" id="companyname" placeholder='Seller name' required />
                     <input style={{ height: "35px" }} className='w-100' type="number" name="numbers" id="number" placeholder='Quantity' />
                     <input style={{ height: "35px" }} className='w-100' type="text" name="photo" id="photo" placeholder='Photo Url' required />
                     <input style={{ height: "35px" }} className='w-100' type="email" name="email" id="email" value={user?.email} readOnly />

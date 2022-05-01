@@ -5,8 +5,14 @@ import './Allinventory.css'
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import deleteData from "../../utilitis/deleteData";
+import useInventory from "../../hooks/useInventory";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebaseinit";
 const Allinventory = () => {
+    const [user] = useAuthState(auth)
     const [products, setProducts] = useState([])
+    const [inventorys, setInventorys] = useInventory(user)
     useEffect(() => {
         fetch('https://bikes-server-side.herokuapp.com/bikes')
             .then(res => res.json())
@@ -14,25 +20,8 @@ const Allinventory = () => {
     }, [])
 
     const handleDeleteBtn = (id) => {
-        const confirmation = window.confirm("Do you want to Delete your item")
-        if (confirmation) {
-            const url = `https://bikes-server-side.herokuapp.com/bikes/${id}`
-            fetch(url, {
-                method: "DELETE",
-                headers: {
-                    'Content-Type': 'appliction/json'
-                }
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount > 0) {
-                        const remaining = products.filter(product => product._id !== id)
-                        setProducts(remaining)
-                        toast("Deleted One Collection")
-                    }
-                })
-
-        }
+        const url = `https://bikes-server-side.herokuapp.com/bikes/${id}`
+        deleteData(id, url, products, setProducts)
     }
     return (
 
@@ -57,6 +46,19 @@ const Allinventory = () => {
 
                                     <tr>
                                         <th scope="row">{index + 1}</th>
+                                        <td>{product?.name}</td>
+                                        <td>{product?.quantity}</td>
+                                        <td>{product?.company}</td>
+                                        <td><button onClick={() => handleDeleteBtn(product._id)} className="btn btn-danger"><RiDeleteBin5Fill /></button></td>
+                                    </tr>
+
+                                )
+                            }
+                            {
+                                inventorys.map((product, index) =>
+
+                                    <tr>
+                                        <th scope="row">{index + 12}</th>
                                         <td>{product?.name}</td>
                                         <td>{product?.quantity}</td>
                                         <td>{product?.company}</td>
