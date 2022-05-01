@@ -14,6 +14,7 @@ import CustomerInventory from './Pages/CustomerInventory/CustomerInventory';
 import RequireAuth from './RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
 import Stores from './Pages/Stores/Stores';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Allinventory></Allinventory>
         </RequireAuth>}></Route>
         <Route path='/blogs' element={<Blog></Blog>} />
+        <Route path='*' element={<NotFound></NotFound>} />
       </Routes>
 
       <Footer></Footer>
