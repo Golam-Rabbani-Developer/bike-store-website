@@ -7,7 +7,7 @@ const Product = ({ product }) => {
         <div data-aos="fade-up" style={{ background: "#F6F6F6" }} className='product card p-4 border-0 '>
             <h4 className='text-muted'>Seller  : {company}</h4>
             <hr />
-            <div className='product-img' >
+            <div style={{ height: "260px" }} className='product-img' >
                 <img className='mx-auto' style={{ width: "200px" }} src={picture} alt="" />
             </div>
             <hr />

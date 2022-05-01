@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaUserLock } from "react-icons/fa"
 import { MdAlternateEmail } from 'react-icons/md'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -10,43 +10,38 @@ import auth from '../../../firebaseinit';
 import { toast } from 'react-toastify';
 import { async } from '@firebase/util';
 import axios from 'axios';
+import useToken from '../../../hooks/useToken';
 const Login = () => {
+    const [user] = useAuthState(auth)
     const navigate = useNavigate()
+    const [token] = useToken(user)
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
     const [
-        signInWithEmailAndPassword,
+        signInWithEmailAndPassword, signuser, loading, error
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(
         auth
     );
     const [signInWithGoogle] = useSignInWithGoogle(auth);
-    const [user] = useAuthState(auth)
     const [email, setEmail] = useState('')
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true })
+        }
+    }, [user])
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         const email = e.target.email.value;
         const pass = e.target.password.value;
         await signInWithEmailAndPassword(email, pass)
-            .then(res => {
-                navigate(from, { replace: true })
-            })
-        const url = `https://bikes-server-side.herokuapp.com/login`
-        const { data } = await axios.post(url, { email })
-        localStorage.setItem('accessToken', JSON.stringify(data.accessToken))
-        console.log(data.accessToken)
         e.target.reset()
     }
     const handleGoogle = async () => {
-        await signInWithGoogle().then(res => {
-            navigate(from, { replace: true })
-        })
-        const email = user?.user?.email;
-        const url = `https://bikes-server-side.herokuapp.com/login`
-        const { data } = await axios.post(url, { email })
-        localStorage.setItem('accessToken', JSON.stringify(data))
-
+        await signInWithGoogle()
     }
+
     return (
         <div className='login-form p-5 rounded-3'>
             <img style={{ width: "100px" }} src={img} alt="" />
@@ -60,6 +55,9 @@ const Login = () => {
                 <div className='input-box mb-4'>
                     <input className='form-control text-center' type="password" name="password" id="password" required placeholder='User Password' />
                     <p className='user-pass'><FaUserLock /></p>
+                    {
+                        error && <p className='text-danger'>{error.message}</p>
+                    }
                     <p onClick={async () => {
                         email && await sendPasswordResetEmail(email)
                             .then(res => {
