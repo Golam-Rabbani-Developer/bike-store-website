@@ -21,18 +21,12 @@ const Header = () => {
                         <Nav className="ms-auto">
                             <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#home" as={Link} to='/home'>Home</Nav.Link>
                             <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#home" as={Link} to='/inventory'>Inventory</Nav.Link>
-
-                            {
-                                user && <>
-                                    <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/customerinventory'>My Collection</Nav.Link>
-                                    <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/allinventory'>Manage Inventory</Nav.Link>
-                                    <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/addinventory'>Add Inventory</Nav.Link>
-                                </>
-                            }
-                            <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/blogs'>Blogs</Nav.Link>
+                            <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/customerinventory'>My Collection</Nav.Link>
+                            <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/allinventory'>Manage Inventory</Nav.Link>
+                            <Nav.Link className='text-start ms-md-4 fw-bold text-white' href="#link" as={Link} to='/addinventory'>Add Inventory</Nav.Link>
                             {
                                 user ?
-                                    <Nav.Link onClick={() => signOut(auth)} className='text-start ms-md-4 fw-bold text-white btn-danger btn'>LogOut</Nav.Link>
+                                    <Nav.Link onClick={() => signOut(auth)} className='text-start ms-md-4 fw-bold text-white btn-danger'>LogOut</Nav.Link>
                                     :
                                     <Nav.Link className='text-start ms-md-4 fw-bold text-dark global-btn rounded-2 ps-1 login-btn text-center px-md-3' href="#link" as={Link} to='/Login'>Login</Nav.Link>
                             }

@@ -1,7 +1,7 @@
 
 const addRemoveData = (data, id) => {
     console.log(data.quantity)
-    const url = `https://bikes-server-side.herokuapp.com/bikes/${id}`
+    const url = `https://plum-comfortable-meerkat.cyclic.app/bikes/${id}`
     fetch(url, {
         method: "PUT",
         headers: {

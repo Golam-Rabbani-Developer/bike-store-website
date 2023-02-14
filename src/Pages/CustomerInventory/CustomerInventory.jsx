@@ -10,7 +10,7 @@ const CustomerInventory = () => {
     const [user] = useAuthState(auth)
     const [inventorys, setInventorys] = useInventory(user)
     const handleDeleteBtn = (id) => {
-        const url = `https://bikes-server-side.herokuapp.com/addedCollection/${id}`
+        const url = `https://plum-comfortable-meerkat.cyclic.app/addedCollection/${id}`
         deleteData(id, url, inventorys, setInventorys)
     }
     return (

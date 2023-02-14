@@ -4,11 +4,17 @@
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid rgb(210, 209, 209);
     font-family: var(--secondary-font);
-    background-color: #D4F1EE;
+    background-color: #d4f1ee44;
 }
 
 .google {
     border-radius: 35px;
+    transition: all 0.5s;
+}
+
+.google:hover,
+.login-form input[type=submit]:hover {
+    transform: translateY(-10px);
 }
 
 .reset-pass {
@@ -18,6 +24,7 @@
 .login-form input {
     padding: 10px 0;
     border-radius: 23px;
+    transition: all 0.5s;
 }
 
 .input-box {

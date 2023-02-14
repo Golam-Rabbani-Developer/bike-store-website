@@ -14,13 +14,13 @@ const Allinventory = () => {
     const [products, setProducts] = useState([])
     const [inventorys, setInventorys] = useInventory(user)
     useEffect(() => {
-        fetch('https://bikes-server-side.herokuapp.com/bikes')
+        fetch('https://plum-comfortable-meerkat.cyclic.app/bikes')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     const handleDeleteBtn = (id) => {
-        const url = `https://bikes-server-side.herokuapp.com/bikes/${id}`
+        const url = `https://plum-comfortable-meerkat.cyclic.app/bikes/${id}`
         deleteData(id, url, products, setProducts)
     }
     return (

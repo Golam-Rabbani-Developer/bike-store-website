@@ -6,7 +6,7 @@ const useToken = (user) => {
     useEffect(() => {
         const getToken = async () => {
             const email = user?.use?.email
-            const url = `https://bikes-server-side.herokuapp.com/login`
+            const url = `https://plum-comfortable-meerkat.cyclic.app/login`
             const { data } = await axios.post(url, { email })
             setToken(data.accessToken)
             localStorage.setItem('accessToken', JSON.stringify(data.accessToken))

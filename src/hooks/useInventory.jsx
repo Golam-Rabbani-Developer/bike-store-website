@@ -9,7 +9,7 @@ const useInventory = (user) => {
     useEffect(() => {
         const getInventory = async () => {
             const email = user?.email;
-            const url = `https://bikes-server-side.herokuapp.com/addedCollection?email=${email}`
+            const url = `https://plum-comfortable-meerkat.cyclic.app/addedCollection?email=${email}`
             try {
                 fetch(url, {
                     headers: {

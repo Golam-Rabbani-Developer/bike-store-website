@@ -7,7 +7,7 @@ const Stores = () => {
     const [pageCount, setPageCount] = useState(0)
     const [products, setProducts, page, setPage,] = useProducts()
     useEffect(() => {
-        fetch(`https://bikes-server-side.herokuapp.com/bikecount`)
+        fetch(`https://plum-comfortable-meerkat.cyclic.app/bikecount`)
             .then(res => res.json())
             .then(data => {
                 const number = Math.ceil(parseInt(data.count) / 6)

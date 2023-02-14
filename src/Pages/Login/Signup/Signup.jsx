@@ -61,14 +61,14 @@ const Signup = () => {
                     <p className='user-pass'><FaUserLock /></p>
                 </div>
 
-                <input className='w-100 btn-danger btn fw-bold' type="submit" value="Login" />
+                <input className='w-100 btn-warning btn fw-bold' type="submit" value="Login" />
             </form>
             <p className='mt-4'>Or</p>
             <hr className='mt-2' />
-            <button onClick={handleGoogle} className="google bg-danger px-5 py-2 border-0  text-white">
+            <button onClick={handleGoogle} className="google bg-warning px-5 py-2 border-0 ">
                 <FcGoogle className='mb-1 me-2' /> Google
             </button>
-            <p className='mt-3'>Already have an account ? <Link to='/login' className='text-danger fw-bold text-decoration-none'>Log In</Link></p>
+            <p className='mt-3'>Already have an account ? <Link to='/login' className='text-warning fw-bold text-decoration-none'>Please log In</Link></p>
         </div>
     );
 };

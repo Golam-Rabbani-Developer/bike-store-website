@@ -19,7 +19,7 @@ const Addinventory = () => {
             photourl: photourl,
             company: company,
         }
-        const url = `https://bikes-server-side.herokuapp.com/bikes`
+        const url = `https://plum-comfortable-meerkat.cyclic.app/bikes`
         fetch(url, {
             method: "POST",
             headers: {

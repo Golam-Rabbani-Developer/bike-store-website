@@ -24,7 +24,8 @@ const Login = () => {
         auth
     );
     const [signInWithGoogle] = useSignInWithGoogle(auth);
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState('');
+
     useEffect(() => {
         if (token) {
             navigate(from, { replace: true })
@@ -67,15 +68,15 @@ const Login = () => {
                     }} className='text-end reset-pass'><small>Forget Password ?</small></p>
                 </div>
 
-                <input className='w-100 btn-danger btn fw-bold' type="submit" value="Login" />
+                <input className='w-100 btn-warning btn fw-bold' type="submit" value="Login" />
 
             </form>
             <p className='mt-4'>Or</p>
             <hr className='mt-2' />
-            <button onClick={handleGoogle} className="google bg-danger px-5 py-2 border-0  text-white">
+            <button onClick={handleGoogle} className="google bg-warning px-5 py-2 border-0  text-white">
                 <FcGoogle className='mb-1 me-2' /> Google
             </button>
-            <p className='mt-3'>Don't have an account ? <Link to='/signup' className='text-danger fw-bold text-decoration-none'>Create Now</Link></p>
+            <p className='mt-3'>Don't have an account ? <Link to='/signup' className='text-warning fw-bold text-decoration-none'>Please Create Now</Link></p>
         </div>
     );
 };
